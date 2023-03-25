@@ -13,7 +13,10 @@ class SearchProducts extends Component
     public function render(): View
     {
         $viewData = [];
-        $viewData['products'] = Product::where('name', 'LIKE', '%'.$this->search.'%')->get();
+        $viewData['products'] = [];
+        if(!empty($this->search)){
+            $viewData['products'] = Product::where('name', 'LIKE', '%'.$this->search.'%')->get();
+        }
         return view('livewire.products.search-products')->with('viewData', $viewData);
     }
 }
