@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index');
 Route::get('/products', 'App\Http\Controllers\ProductsController@index')->name('products.index');
+Route::get('/products/search', 'App\Http\Controllers\ProductsController@search')->name('products.search');

@@ -6,6 +6,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
   <link href="{{ asset('/css/app.css') }}" rel="stylesheet" />
   <title>@yield('title', 'Online Store')</title>
+  @livewireStyles
 </head>
 <body>
   <!-- header -->
@@ -48,8 +49,8 @@
     </div>
   </div>
   <!-- footer -->
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
   </script>
+  @livewireScripts
 </body>
 </html>

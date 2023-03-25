@@ -18,4 +18,14 @@ class ProductsController extends Controller
 
         return view('products.index')->with('viewData', $viewData);
     }
+
+    public function search(): View
+    {
+        $viewData = [];
+        $viewData['title'] = 'Products - Online Store';
+        $viewData['subtitle'] = 'List of products';
+        /*$viewData['products'] = Product::all();*/
+
+        return view('products.search')->with('viewData', $viewData);
+    }
 }
